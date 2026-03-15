@@ -64,8 +64,6 @@ See the dbus description for more information about D-BUS in general.
 Summary:		Simple inter-process messaging system (TQt-based shared library)
 Group:			System/Libraries
 
-Obsoletes:		trinity-dbus-tqt < %{?epoch:%{epoch}:}%{version}-%{release}
-
 %description -n %{libname}-0
 D-BUS is a message bus, used for sending messages between applications.
 Conceptually, it fits somewhere in between raw sockets and CORBA in
@@ -87,9 +85,7 @@ See the dbus description for more information about D-BUS in general.
 Summary:		Simple inter-process messaging system (TQt interface)
 Group:			Development/Libraries/C and C++
 
-Requires:		%{libname}-0 = %{?epoch:%{epoch}:}%{version}-%{release}
-
-Obsoletes:		trinity-dbus-tqt-devel < %{?epoch:%{epoch}:}%{version}-%{release}
+Requires:		%{libname}-0 = %{EVRD}
 
 Requires:	dbus-devel
 
